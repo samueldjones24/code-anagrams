@@ -1,0 +1,79 @@
+{
+  "anagrams": [
+    {
+      "id": 1,
+      "value": "CAPTJARVIS",
+      "answer": "JAVASCRIPT"
+    },
+    {
+      "id": 2,
+      "value": "COUNTFIN",
+      "answer": "FUNCTION"
+    },
+    {
+      "id": 3,
+      "value": "ETCJOB",
+      "answer": "OBJECT"
+    },
+    {
+      "id": 4,
+      "value": "ABAVILER",
+      "answer": "VARIABLE"
+    },
+    {
+      "id": 5,
+      "value": "ATOPICPLAIN",
+      "answer": "APPLICATION"
+    },
+    {
+      "id": 6,
+      "value": "NABOLEO",
+      "answer": "BOOLEAN"
+    },
+    {
+      "id": 7,
+      "value": "ADAPT YET",
+      "answer": "DATA TYPE"
+    },
+    {
+      "id": 8,
+      "value": "RACKET CATS",
+      "answer": "STACK TRACE"
+    },
+    {
+      "id": 9,
+      "value": "FILET OPINION",
+      "answer": "INFINITE LOOP"
+    },
+    {
+      "id": 10,
+      "value": "BUNGIGGED",
+      "answer": "DEBUGGING"
+    },
+    {
+      "id": 11,
+      "value": "LUST PREQUEL",
+      "answer": "PULL REQUEST"
+    },
+    {
+      "id": 12,
+      "value": "ROAMLIGHT",
+      "answer": "ALGORITHM"
+    },
+    {
+      "id": 13,
+      "value": "RACKET CATS",
+      "answer": "STACK TRACE"
+    },
+    {
+      "id": 14,
+      "value": "FILET OPINION",
+      "answer": "INFINITE LOOP"
+    },
+    {
+      "id": 15,
+      "value": "BUNGIGGED",
+      "answer": "DEBUGGING"
+    }
+  ]
+}
