@@ -10,7 +10,7 @@ const Timer = (props) => {
 
   return (
     <div>
-      <div className="time">{seconds}s</div>
+      {Boolean(isActive) && <div className="time">{seconds}s</div>}
       <div className="row">
         <button
           type="button"
