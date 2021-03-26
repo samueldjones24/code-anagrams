@@ -1,5 +1,4 @@
 import ANAGRAMS from "./anagrams.json";
-import "./Input.scss";
 import { errorToast, successToast } from "./utils/toast/index.js";
 
 function Input(props) {
@@ -25,6 +24,10 @@ function Input(props) {
           "Great job!",
           "Well done!",
           "You're pretty good at this!",
+          "Correct!",
+          "Keep going!",
+          "Hello, Anagram Master!",
+          "Good work!",
         ];
         successToast(
           successMessages[Math.floor(Math.random() * successMessages.length)]
@@ -41,12 +44,10 @@ function Input(props) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        {props.label}:
-        <input className="input" type="text" {...props.bind} />
-      </label>
-      <input type="submit" value="Submit" className="button button-primary" />
+    <form onSubmit={handleSubmit} className="input__container">
+      <label htmlFor="input">{props.label}: </label>
+      <input id="input" className="input-field" type="text" {...props.bind} />
+      <input type="submit" value="Submit" className="button button--sm" />
     </form>
   );
 }

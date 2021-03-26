@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import "./App.scss";
 import Input from "./Input.js";
 import ANAGRAMS from "./anagrams.json";
-import Timer from "./Timer.js";
+import Intro from "./Intro.js";
 import GameOver from "./GameOver.js";
+import Emoji from "./Emoji.js";
+import formatTime from "./utils/formatTime/index.js";
 
 function App() {
   const initialAnagram = ANAGRAMS.anagrams[0].value;
@@ -12,44 +14,25 @@ function App() {
   const [level, setLevel] = useState(1);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  const [score, setScore] = useState(1);
+  const [score, setScore] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
 
   useEffect(() => {
     let interval = null;
     if (isActive) {
-      interval = setInterval(() => {
-        setSeconds((seconds) => seconds + 1);
-      }, 1000);
+      if (seconds === 300) {
+        setIsActive(false);
+        setIsGameOver(true);
+      } else {
+        interval = setInterval(() => {
+          setSeconds((seconds) => seconds + 1);
+        }, 1000);
+      }
     } else if (!isActive && seconds !== 0) {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
   }, [isActive, seconds]);
-
-  function resetGame() {
-    setAnagram(initialAnagram);
-    setSeconds(0);
-    setIsActive(false);
-    setLevel(1);
-    setScore(1);
-  }
-
-  function moveToNextAnagram() {
-    const currentAnagramIndex = ANAGRAMS.anagrams.findIndex(
-      (a) => a.value === anagram
-    );
-    const nextAnagramIndex = currentAnagramIndex + 1;
-
-    if (Number(nextAnagramIndex) === Number(5)) {
-      setLevel(2);
-    } else if (Number(nextAnagramIndex) === Number(10)) {
-      setLevel(3);
-    }
-
-    const nextAnagram = ANAGRAMS.anagrams[currentAnagramIndex + 1].value;
-    setAnagram(nextAnagram);
-  }
 
   const useInput = (initialValue) => {
     const [value, setValue] = useState(initialValue);
@@ -69,26 +52,79 @@ function App() {
 
   const { value, bind, reset } = useInput("");
 
+  function resetGame() {
+    setAnagram(initialAnagram);
+    setSeconds(0);
+    setIsActive(false);
+    setLevel(1);
+    setScore(1);
+    reset();
+  }
+
+  function moveToNextAnagram() {
+    const currentAnagramIndex = ANAGRAMS.anagrams.findIndex(
+      (a) => a.value === anagram
+    );
+    const nextAnagramIndex = currentAnagramIndex + 1;
+
+    if (Number(nextAnagramIndex) === Number(5)) {
+      setLevel(2);
+    } else if (Number(nextAnagramIndex) === Number(10)) {
+      setLevel(3);
+    }
+
+    const nextAnagram = ANAGRAMS.anagrams[currentAnagramIndex + 1].value;
+    setAnagram(nextAnagram);
+  }
+
+  const letters = [
+    "C",
+    "O",
+    "D",
+    "E",
+    " ",
+    "A",
+    "N",
+    "A",
+    "G",
+    "R",
+    "A",
+    "M",
+    "S",
+  ];
+
+  const time = formatTime(seconds);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Code Anagrams</h1>
+    <div className="app">
+      <header>
+        <div>
+          {letters.map((c, i) => {
+            const style = { animationDelay: 0.5 + i / 10 + "s" };
+
+            return (
+              <span
+                aria-hidden="true"
+                key={i}
+                style={style}
+                className="animate-letter heading-primary"
+              >
+                {c}
+              </span>
+            );
+          })}
+        </div>
+        {Boolean(isActive) && (
+          <div className="time">
+            <span className="bold"> Level {level} | </span>
+            <Emoji symbol="⏳" label="hourglass not done" /> {time}
+          </div>
+        )}
       </header>
 
       {Boolean(!isActive && !isGameOver) && (
-        <section>
-          <h4>Complete all the anagrams as quickly as you can</h4>
-          <p>3 levels - 15 anagrams </p>
-
-          <p>
-            A quick tip before you start: if the anagram consists of 2 words,
-            the answer will also consist of 2 words.
-          </p>
-          <p>Good luck!</p>
-        </section>
+        <Intro setIsActive={setIsActive} isActive={isActive} />
       )}
-
-      <Timer seconds={seconds} setIsActive={setIsActive} isActive={isActive} />
 
       {Boolean(isGameOver) && (
         <main>
@@ -103,8 +139,6 @@ function App() {
 
       {Boolean(isActive) && (
         <main>
-          <h3>Level {level}</h3>
-
           <h1>{anagram}</h1>
           <Input
             anagram={anagram}
@@ -121,7 +155,7 @@ function App() {
             reset={reset}
           />
           <button
-            className="button button-primary"
+            className="button button--sm button--red"
             onClick={() => {
               setAnagram(initialAnagram);
               resetGame();
@@ -133,8 +167,18 @@ function App() {
         </main>
       )}
 
-      <footer>
-        <h6>built by Samuel Jones</h6>
+      <footer className="animated">
+        <h6>
+          built with <Emoji symbol="☕" label="coffee" /> by{" "}
+          <a
+            href="https://www.twitter.com/samueldjones"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+          >
+            Samuel Jones
+          </a>
+        </h6>
       </footer>
     </div>
   );
