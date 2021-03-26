@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.scss";
 import Input from "./Input.js";
 import ANAGRAMS from "./anagrams.json";
@@ -6,16 +6,17 @@ import Intro from "./Intro.js";
 import GameOver from "./GameOver.js";
 import Emoji from "./Emoji.js";
 import formatTime from "./utils/formatTime/index.js";
+import useLocalStorage from "./utils/useLocalStorage/index.js";
 
 function App() {
   const initialAnagram = ANAGRAMS.anagrams[0].value;
 
-  const [anagram, setAnagram] = useState(initialAnagram);
-  const [level, setLevel] = useState(1);
-  const [seconds, setSeconds] = useState(0);
-  const [isActive, setIsActive] = useState(false);
-  const [score, setScore] = useState(0);
-  const [isGameOver, setIsGameOver] = useState(false);
+  const [anagram, setAnagram] = useLocalStorage("anagram", initialAnagram);
+  const [level, setLevel] = useLocalStorage("level", 1);
+  const [seconds, setSeconds] = useLocalStorage("seconds", 0);
+  const [isActive, setIsActive] = useLocalStorage("isActive", false);
+  const [score, setScore] = useLocalStorage("score", 0);
+  const [isGameOver, setIsGameOver] = useLocalStorage("isGameOver", false);
 
   useEffect(() => {
     let interval = null;
@@ -32,10 +33,10 @@ function App() {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  }, [isActive, seconds, setIsActive, setIsGameOver, setSeconds]);
 
   const useInput = (initialValue) => {
-    const [value, setValue] = useState(initialValue);
+    const [value, setValue] = useLocalStorage("value", initialValue);
 
     return {
       value,
