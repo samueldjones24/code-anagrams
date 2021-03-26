@@ -1,0 +1,235 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveTextColor {
+  0% {
+    bottom: -0.2em;
+    opacity: 1;
+    background: -webkit-linear-gradient($color-white, #74ebd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  50% {
+    bottom: 0.2em;
+    background: -webkit-linear-gradient($color-white, #acb6e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+    background: -webkit-linear-gradient(#74ebd5, #acb6e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.app {
+  text-align: center;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $color-white;
+  min-height: 100vh;
+}
+
+.button {
+  padding: 0.6rem 1.5rem;
+  margin: 0.4rem;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-style: groove;
+  background-color: $primary;
+  border: 1px solid $color-black;
+  color: $color-white;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:focus {
+    outline-width: 0;
+  }
+
+  &:hover {
+    background-color: $secondary;
+    border: 1px solid $color-black;
+  }
+
+  &--sm {
+    font-size: $font-size-sm;
+  }
+
+  &--md {
+    font-size: $font-size-md;
+  }
+
+  &--lg {
+    font-size: $font-size-xl;
+    margin: 50px;
+
+    &:hover {
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  &--red {
+    background-color: #ed213a;
+
+    &:hover {
+      background-color: darken(#ed213a, 10%);
+    }
+  }
+}
+
+.intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__tip {
+  width: 35%;
+  height: auto;
+  padding: 0.6rem 1.5rem;
+  border: $color-white;
+  border-style: groove;
+  border-radius: 0.4rem;
+  font-size: $font-size-sm;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 20px;
+  text-align: start !important;
+  align-items: center;
+}
+
+.time {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.footer__link {
+  color: rgb(88, 182, 245);
+  text-decoration: underline;
+  text-decoration-style: solid;
+
+  &:hover {
+    color: lighten(rgb(88, 182, 245), 10%);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+}
+
+.animate-letter {
+  position: relative;
+  animation: moveTextColor 0.75s forwards;
+  bottom: -1em;
+  opacity: 0;
+}
+
+.animated {
+  animation: fadeIn 3s ease-in;
+}
+
+.social-share-button {
+  margin: 10px;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
+}
+
+.font-size-lg {
+  font-size: $font-size-lg;
+}
+
+.font-size-xl {
+  font-size: $font-size-xl;
+}
+
+.font-size-xxl {
+  font-size: $font-size-xxl;
+}
+
+.input-field {
+  display: inline-block;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow 1s;
+  line-height: 2rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0.2rem 0.8rem 1.6rem $primary;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .heading-primary {
+    font-size: $font-size-xl;
+  }
+
+  .heading-secondary {
+    font-size: $font-size-sm;
+  }
+
+  .app {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+}
+
+.margin-top {
+  margin-top: 20px;
+}
+
+.input__container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: auto;
+  text-align: start !important;
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: $font-size-xxl;
+}
+
+.heading-secondary {
+  font-size: $font-size-md;
+}
