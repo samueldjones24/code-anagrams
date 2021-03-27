@@ -96,6 +96,8 @@ function App() {
 
   const time = formatTime(seconds);
 
+  const copyRightYear = new Date().getFullYear();
+
   return (
     <div className="app">
       <header>
@@ -178,7 +180,8 @@ function App() {
             className="footer__link"
           >
             Samuel Jones
-          </a>
+          </a>{" "}
+          &#169; {copyRightYear}
         </h6>
       </footer>
     </div>
