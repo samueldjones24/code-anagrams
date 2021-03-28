@@ -58,7 +58,7 @@ function App() {
     setSeconds(0);
     setIsActive(false);
     setLevel(1);
-    setScore(1);
+    setScore(0);
     reset();
   }
 
@@ -181,7 +181,9 @@ function App() {
           >
             Samuel Jones
           </a>{" "}
-          &#169; {copyRightYear}
+          <br />
+          <br />
+          Copyright &#169; {copyRightYear}
         </h6>
       </footer>
     </div>

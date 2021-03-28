@@ -1,0 +1,14 @@
+@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .heading-primary {
+    font-size: $font-size-xl;
+  }
+
+  .heading-secondary {
+    font-size: $font-size-sm;
+  }
+
+  .app {
+    font-size: 0.8rem;
+    padding: 20px;
+  }
+}

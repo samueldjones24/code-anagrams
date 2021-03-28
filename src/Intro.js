@@ -10,12 +10,20 @@ const Intro = (props) => {
 
   return (
     <>
-      <section className="intro animated margin-top heading-secondary">
-        <h2>Complete all the anagrams before the time runs out!</h2>
+      <section className="intro animated margin-top">
+        <h3>Complete all the anagrams before the time runs out!</h3>
         <div>
           <span className="font-size-xl bold">3</span> levels
-          <span className="font-size-xl bold"> | 15</span> anagrams
-          <span className="font-size-xl bold"> | 5</span> minutes
+          <span className="font-size-xl bold">
+            {" "}
+            <span className="divider">|</span> 15
+          </span>{" "}
+          anagrams
+          <span className="font-size-xl bold">
+            {" "}
+            <span className="divider">|</span> 5
+          </span>{" "}
+          minutes
         </div>
 
         <button type="button" className="button button--lg" onClick={toggle}>

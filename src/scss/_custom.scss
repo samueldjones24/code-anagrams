@@ -1,38 +1,3 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes moveTextColor {
-  0% {
-    bottom: -0.2em;
-    opacity: 1;
-    background: -webkit-linear-gradient($color-white, #74ebd5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  50% {
-    bottom: 0.2em;
-    background: -webkit-linear-gradient($color-white, #acb6e5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  100% {
-    bottom: 0;
-    opacity: 1;
-    background: -webkit-linear-gradient(#74ebd5, #acb6e5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
 .app {
   text-align: center;
   background-color: black;
@@ -116,9 +81,9 @@
 }
 
 .intro__tip {
-  width: 35%;
+  width: 50%;
   height: auto;
-  padding: 0.6rem 1.5rem;
+  padding: 0.7rem 1.3rem;
   border: $color-white;
   border-style: groove;
   border-radius: 0.4rem;
@@ -136,14 +101,31 @@
 }
 
 .footer__link {
-  color: rgb(88, 182, 245);
-  text-decoration: underline;
-  text-decoration-style: solid;
+  color: #74ebd5;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 
   &:hover {
-    color: lighten(rgb(88, 182, 245), 10%);
-    text-decoration: underline;
-    text-decoration-style: dashed;
+    color: inherit;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #74ebd5;
+    transition: opacity 300ms, transform 300ms;
+    opacity: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.3em, 0);
   }
 }
 
@@ -199,21 +181,6 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 56.25em), only screen and (hover: none) {
-  .heading-primary {
-    font-size: $font-size-xl;
-  }
-
-  .heading-secondary {
-    font-size: $font-size-sm;
-  }
-
-  .app {
-    font-size: 0.8rem;
-    padding: 10px;
-  }
-}
-
 .margin-top {
   margin-top: 20px;
 }
@@ -232,4 +199,11 @@
 
 .heading-secondary {
   font-size: $font-size-md;
+}
+
+.divider {
+  background: -webkit-linear-gradient(#74ebd5, #acb6e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
