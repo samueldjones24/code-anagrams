@@ -19,7 +19,7 @@
 
   50% {
     bottom: 0.2em;
-    background: -webkit-linear-gradient($color-white, #acb6e5);
+    background: -webkit-linear-gradient($color-white, #74ebd5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -27,7 +27,7 @@
   100% {
     bottom: 0;
     opacity: 1;
-    background: -webkit-linear-gradient(#74ebd5, #acb6e5);
+    background: -webkit-linear-gradient($color-white, #74ebd5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

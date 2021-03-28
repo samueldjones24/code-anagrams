@@ -6,6 +6,7 @@ import {
 } from "react-share";
 import formatTime from "./utils/formatTime";
 import confetti from "./utils/gameCompletedConfetti";
+import { Link } from "react-router-dom";
 
 function GameOver(props) {
   const gameCompleted = props.score === 15;
@@ -35,22 +36,26 @@ function GameOver(props) {
   const singularOrPluralAnagram = props.score === 1 ? "anagram" : "anagrams";
 
   return (
-    <div>
-      <h1>
-        You completed {props.score} {singularOrPluralAnagram} in{" "}
-        {formatTime(props.seconds)}
-      </h1>
-      <h2>{displayGameOverMessage()}</h2>
+    <main>
+      <h1>{gameCompleted ? "GAME COMPLETED" : "GAME OVER"}</h1>
+      <h2>
+        You completed <span className="underline">{props.score}</span>{" "}
+        {singularOrPluralAnagram} in{" "}
+        <span className="underline">{formatTime(props.seconds)}</span>
+      </h2>
+      <h3>{displayGameOverMessage()}</h3>
       <div>
-        <button
-          className="button button--md button--red"
-          onClick={() => {
-            props.setIsGameOver(false);
-            props.reset();
-          }}
-        >
-          Try again
-        </button>
+        <Link to="/">
+          <button
+            className="button button--md button--red"
+            onClick={() => {
+              props.setIsGameOver(false);
+              props.reset();
+            }}
+          >
+            Try again
+          </button>
+        </Link>
         <div>
           <p>or share your score with friends</p>
           <TwitterShareButton
@@ -80,7 +85,7 @@ Do you think you can do better?`}
           </FacebookShareButton>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

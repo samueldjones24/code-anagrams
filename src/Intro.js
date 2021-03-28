@@ -1,16 +1,13 @@
 import Emoji from "./Emoji.js";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Intro = (props) => {
   const { setIsActive } = props;
 
-  function toggle() {
-    setIsActive(true);
-  }
-
   return (
     <>
-      <section className="intro animated margin-top">
+      <main className="intro animated margin-top">
         <h3>Complete all the anagrams before the time runs out!</h3>
         <div>
           <span className="font-size-xl bold">3</span> levels
@@ -26,9 +23,15 @@ const Intro = (props) => {
           minutes
         </div>
 
-        <button type="button" className="button button--lg" onClick={toggle}>
-          Start
-        </button>
+        <Link to="/play">
+          <button
+            type="button"
+            className="button button--lg"
+            onClick={() => setIsActive(true)}
+          >
+            Start
+          </button>
+        </Link>
 
         <div className="intro__tip">
           <div className="bold">
@@ -37,7 +40,7 @@ const Intro = (props) => {
           </div>
           <div>If the anagram consists of 2 words, then so will the answer</div>
         </div>
-      </section>
+      </main>
     </>
   );
 };
