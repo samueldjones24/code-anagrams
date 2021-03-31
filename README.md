@@ -1,6 +1,8 @@
 # Code Anagrams
 
-- 3 Levels - 15 Anagrams - 5 Minutes -
+ 📈 3 Levels 
+ 🤔 15 Anagrams
+ ⏲️ 5 Minutes 
 
 Can you answer all the angrams before the time runs out?
 
