@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <footer className="animated">
-      <h6>
+      <div className="footer__text">
         built with <Emoji symbol="☕" label="coffee" /> by{" "}
         <a
           href="https://www.twitter.com/samueldjones"
@@ -16,9 +16,8 @@ function Footer() {
           Samuel Jones
         </a>{" "}
         <br />
-        <br />
         Copyright &#169; {copyRightYear}
-      </h6>
+      </div>
     </footer>
   );
 }
