@@ -18,13 +18,13 @@ test("should render Intro", () => {
   expect(introText).toBeInTheDocument();
 });
 
-test("should start game when user clicks on Start button", () => {
+test("should start game when user clicks on Play button", () => {
   render(
     <Router>
       <Intro setIsActive={setIsActive} />
     </Router>
   );
 
-  userEvent.click(screen.getByText("Start"));
+  userEvent.click(screen.getByText("Play"));
   expect(setIsActive).toHaveBeenCalledWith(true);
 });

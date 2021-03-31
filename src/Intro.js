@@ -35,7 +35,7 @@ const Intro = (props) => {
             className="button button--lg"
             onClick={() => setIsActive(true)}
           >
-            Start
+            Play
           </button>
         </Link>
 
