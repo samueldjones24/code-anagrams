@@ -12,4 +12,4 @@ Play the game here --> https://code-anagrams.netlify.app
 
 # Background
 
-I built this app mainly as a learning experience for React Hooks, react-testing-library and a little CSS Grid.<br />
+I built this app mainly as a learning experience for **React Hooks**, **react-testing-library** and a little **CSS Grid**.
