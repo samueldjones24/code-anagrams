@@ -2,7 +2,7 @@ import ANAGRAMS from "./anagrams.json";
 import { errorToast, successToast } from "./utils/toast";
 import useLocalStorage from "./utils/useLocalStorage";
 import Emoji from "./Emoji.js";
-import formatTime from "./utils/formatTime";
+import formatTime from "./utils/convertSecondsToMinutes";
 import GameOver from "./GameOver";
 import { Link } from "react-router-dom";
 import useInterval from "./utils/useInterval";
@@ -74,7 +74,7 @@ function Play(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (value === "") {
+    if (value.trim() === "") {
       errorToast("Oops, didn't quite catch that!");
       return;
     }
@@ -134,19 +134,19 @@ function Play(props) {
             <label htmlFor="input">Answer: </label>
             <input id="input" className="input-field" type="text" {...bind} />
             <input type="submit" value="Submit" className="button button--sm" />
-            <Link to="/">
-              <button
-                className="button button--sm button--red"
-                onClick={() => {
-                  setAnagram(initialAnagram);
-                  resetGame();
-                  reset();
-                }}
-              >
-                Restart
-              </button>
-            </Link>
           </form>
+          <Link to="/">
+            <button
+              className="button button--sm button--red"
+              onClick={() => {
+                setAnagram(initialAnagram);
+                resetGame();
+                reset();
+              }}
+            >
+              Restart
+            </button>
+          </Link>
         </main>
       )}
     </>

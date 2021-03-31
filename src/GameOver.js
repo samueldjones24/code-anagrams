@@ -4,7 +4,7 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from "react-share";
-import formatTime from "./utils/formatTime";
+import formatTime from "./utils/convertSecondsToMinutes";
 import confetti from "./utils/gameCompletedConfetti";
 import { Link } from "react-router-dom";
 
