@@ -1,3 +1,19 @@
+@media (prefers-reduced-motion: reduce) {
+  .animate-letter {
+    animation: none;
+    bottom: 0;
+    opacity: 1;
+    background: -webkit-linear-gradient($color-white, #74ebd5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .animated {
+    animation: none;
+  }
+}
+
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
   .app {
     font-size: $font-size-md;
@@ -17,9 +33,8 @@
   }
 
   .input__container {
-    grid-template-columns: 350px;
+    grid-template-columns: 300px;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
     justify-content: center;
   }
 
@@ -29,8 +44,8 @@
   }
 
   .button--sm {
-    min-width: 100%;
-    margin: 0;
+    min-width: 80%;
+    margin-top: 10px;
   }
 
   .input-field {
