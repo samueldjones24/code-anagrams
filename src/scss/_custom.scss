@@ -33,10 +33,9 @@ a {
   border-radius: 0.4rem;
   text-transform: uppercase;
   font-weight: 600;
-  border-style: groove;
+  border: none;
   background-color: $primary;
-  border: 1px solid $color-black;
-  color: $color-black;
+  color: $color-white;
   cursor: pointer;
   font-family: inherit;
 
@@ -46,7 +45,6 @@ a {
 
   &:hover {
     background-color: $secondary;
-    border: 1px solid $color-black;
   }
 
   &--sm {
