@@ -4,7 +4,7 @@
 
 Can you answer all the angrams before the time runs out?
 
-// TODO: add site domain
+Play the game here --> https://code-anagrams.netlify.app
 
 ## Background
 

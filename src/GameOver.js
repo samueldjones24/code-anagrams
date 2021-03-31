@@ -59,7 +59,7 @@ function GameOver(props) {
         <div>
           <p>or share your score with friends</p>
           <TwitterShareButton
-            url="www.twitter.com" // change to site domain
+            url="https://code-anagrams.netlify.app"
             title={`Check out my score on Code Anagrams:
 
 🔥 ${props.score} anagrams
@@ -72,7 +72,7 @@ Do you think you can do better?`}
             <TwitterIcon size={50} round={true} />
           </TwitterShareButton>
           <FacebookShareButton
-            url="www.facebook.com" // change to site domain
+            url="https://code-anagrams.netlify.app"
             quote={`Check out my score on Code Anagrams:
 
 🔥 ${props.score} anagrams
