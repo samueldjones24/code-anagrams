@@ -37,7 +37,7 @@ function GameOver(props) {
 
   return (
     <main>
-      <h1>{gameCompleted ? "GAME COMPLETED" : "GAME OVER"}</h1>
+      <h1>{gameCompleted ? "GAME COMPLETED!" : "GAME OVER!"}</h1>
       <h2>
         You completed <span className="underline">{props.score}</span>{" "}
         {singularOrPluralAnagram} in{" "}

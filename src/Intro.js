@@ -9,18 +9,24 @@ const Intro = (props) => {
     <>
       <main className="intro animated margin-top">
         <h3>Complete all the anagrams before the time runs out!</h3>
-        <div>
-          <span className="font-size-xl bold">3</span> levels
-          <span className="font-size-xl bold">
+        <div className="intro__info">
+          <div>
+            <span className="intro__info__text bold">3</span> levels
+          </div>
+          <div>
+            <span className="intro__info__text bold divider">|</span>
+          </div>
+          <div>
+            <span className="intro__info__text bold">15 </span>
+            anagrams
+          </div>
+          <div>
             {" "}
-            <span className="divider">|</span> 15
-          </span>{" "}
-          anagrams
-          <span className="font-size-xl bold">
-            {" "}
-            <span className="divider">|</span> 5
-          </span>{" "}
-          minutes
+            <span className="intro__info__text bold divider">|</span>{" "}
+          </div>
+          <div>
+            <span className="intro__info__text bold">5</span> minutes
+          </div>
         </div>
 
         <Link to="/play">

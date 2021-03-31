@@ -134,19 +134,19 @@ function Play(props) {
             <label htmlFor="input">Answer: </label>
             <input id="input" className="input-field" type="text" {...bind} />
             <input type="submit" value="Submit" className="button button--sm" />
+            <Link to="/">
+              <button
+                className="button button--sm button--red"
+                onClick={() => {
+                  setAnagram(initialAnagram);
+                  resetGame();
+                  reset();
+                }}
+              >
+                Restart
+              </button>
+            </Link>
           </form>
-          <Link to="/">
-            <button
-              className="button button--sm button--red"
-              onClick={() => {
-                setAnagram(initialAnagram);
-                resetGame();
-                reset();
-              }}
-            >
-              Restart
-            </button>
-          </Link>
         </main>
       )}
     </>

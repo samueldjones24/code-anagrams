@@ -1,14 +1,39 @@
 @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  .app {
+    font-size: $font-size-md;
+    padding: 10px;
+  }
+
   .heading-primary {
     font-size: $font-size-xl;
   }
 
-  .heading-secondary {
+  .intro__tip {
+    width: 80%;
+  }
+
+  .intro__info {
     font-size: $font-size-sm;
   }
 
-  .app {
-    font-size: 0.8rem;
-    padding: 20px;
+  .input__container {
+    grid-template-columns: 350px;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .time {
+    font-size: $font-size-md;
+    width: 300px;
+  }
+
+  .button--sm {
+    min-width: 100%;
+    margin: 0;
+  }
+
+  .input-field {
+    margin-bottom: 20px;
   }
 }
