@@ -1,13 +1,16 @@
-# Code Anagrams
+# App
 
- 📈 3 Levels 
- 🤔 15 Anagrams
- ⏲️ 5 Minutes 
+## Code Anagrams
 
-Can you answer all the angrams before the time runs out?
+ 📈 3 Levels<br />
+ 🤔 15 Anagrams<br />
+ ⏲️ 5 Minutes<br />
+
+Can you answer all the anagrams before the time runs out?
 
 Play the game here --> https://code-anagrams.netlify.app
 
-## Background
+# Background
 
-I used this app as a learning experience to become more familiar with React Hooks.
+I built this app mainly as a learning experience for React Hooks as well as a little CSS Grid.<br />
+Became more familiar with `useState` and `useEffect` and discovered/implemented some very useful custom hooks. 
