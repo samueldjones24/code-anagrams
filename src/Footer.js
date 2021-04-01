@@ -16,7 +16,7 @@ function Footer() {
           Samuel Jones
         </a>{" "}
         <br />
-        Copyright &#169; {copyRightYear}
+        <div className="margin-top-sm">Copyright &#169; {copyRightYear}</div>
       </div>
     </footer>
   );

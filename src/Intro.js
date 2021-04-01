@@ -7,7 +7,7 @@ const Intro = (props) => {
 
   return (
     <>
-      <main className="intro animated margin-top">
+      <main className="intro animated margin-top-md">
         <h3>Complete all the anagrams before the time runs out!</h3>
         <div className="intro__info">
           <div>
