@@ -73,6 +73,15 @@ a {
       background-color: darken(#ed213a, 10%);
     }
   }
+
+  &--green {
+    background-color: #1bc505e2;
+    color: $color-white;
+
+    &:hover {
+      background-color: darken(#1bc505e2, 10%);
+    }
+  }
 }
 
 .intro {

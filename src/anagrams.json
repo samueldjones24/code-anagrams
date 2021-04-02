@@ -3,77 +3,92 @@
     {
       "id": 1,
       "value": "CAPTJARVIS",
-      "answer": "JAVASCRIPT"
+      "answer": "JAVASCRIPT",
+      "hint": "The most popular programming language"
     },
     {
       "id": 2,
       "value": "COUNTFIN",
-      "answer": "FUNCTION"
+      "answer": "FUNCTION",
+      "hint": "Takes an input, processes it and gives an output"
     },
     {
       "id": 3,
       "value": "ETCJOB",
-      "answer": "OBJECT"
+      "answer": "OBJECT",
+      "hint": "Think key and value pairs"
     },
     {
       "id": 4,
       "value": "ABAVILER",
-      "answer": "VARIABLE"
+      "answer": "VARIABLE",
+      "hint": "The more descriptive, the better. "
     },
     {
       "id": 5,
       "value": "ATOPICPLAIN",
-      "answer": "APPLICATION"
+      "answer": "APPLICATION",
+      "hint": "You probably have too many on your phone"
     },
     {
       "id": 6,
       "value": "NABOLEO",
-      "answer": "BOOLEAN"
+      "answer": "BOOLEAN",
+      "hint": "Yes or no?"
     },
     {
       "id": 7,
       "value": "WORMFAKER",
-      "answer": "FRAMEWORK"
+      "answer": "FRAMEWORK",
+      "hint": "There are simply too many to name"
     },
     {
       "id": 8,
       "value": "FIERCE NATURES",
-      "answer": "USER INTERFACE"
+      "answer": "USER INTERFACE",
+      "hint": "Needs to look stylish and easy to use"
     },
     {
       "id": 9,
       "value": "ROAMLIGHT",
-      "answer": "ALGORITHM"
+      "answer": "ALGORITHM",
+      "hint": "It's probably smarter than you"
     },
     {
       "id": 10,
       "value": "BUNGIGGED",
-      "answer": "DEBUGGING"
+      "answer": "DEBUGGING",
+      "hint": "That bug is here somehwere"
     },
     {
       "id": 11,
       "value": "ATOMCONTINUED",
-      "answer": "DOCUMENTATION"
+      "answer": "DOCUMENTATION",
+      "hint": "I'll read it later"
     },
     {
       "id": 12,
       "value": "LUST PREQUEL",
-      "answer": "PULL REQUEST"
+      "answer": "PULL REQUEST",
+      "hint": "It should fix a bug or add a feature"
     },
     {
       "id": 13,
       "value": "BASICITYSLICE",
-      "answer": "ACCESSIBILITY"
+      "answer": "ACCESSIBILITY",
+      "hint": "One does not simply ignore this"
     },
     {
       "id": 14,
       "value": "RACKET CATS",
-      "answer": "STACK TRACE"
+      "answer": "STACK TRACE",
+      "hint": "Needle in a haystack"
     },
     {
       "id": 15,
       "value": "FILET OPINION",
-      "answer": "INFINITE LOOP"
+      "answer": "INFINITE LOOP",
+      "hint": "Is this happening or is my computer just slow?"
     }
   ]
 }

@@ -112,6 +112,14 @@ function Play(props) {
     }
   };
 
+  const handleHint = () => {
+    const { hint } = ANAGRAMS.anagrams.find((a) => a.value === anagram);
+
+    successToast(hint, {
+      autoClose: 4000,
+    });
+  };
+
   const time = formatTime(seconds);
 
   return (
@@ -135,6 +143,12 @@ function Play(props) {
             <input id="input" className="input-field" type="text" {...bind} />
             <input type="submit" value="Submit" className="button button--sm" />
           </form>
+          <button
+            className="button button--sm button--green"
+            onClick={() => handleHint()}
+          >
+            Hint
+          </button>
           <Link to="/">
             <button
               className="button button--sm button--red"
