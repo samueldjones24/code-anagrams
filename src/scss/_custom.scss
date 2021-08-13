@@ -22,6 +22,7 @@
   font-size: calc(10px + 2vmin);
   color: $color-white;
   min-height: 100vh;
+  padding: 20px;
 }
 
 a {
@@ -90,6 +91,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  &__mission {
+    width: 60%;
+    text-align: left;
+  }
 
   &__tip {
     width: 50%;

@@ -32,6 +32,11 @@
     font-size: $font-size-sm;
   }
 
+  .intro__mission {
+    width: 100%;
+    text-align: center;
+  }
+
   .input__container {
     grid-template-columns: 300px;
     grid-template-rows: 1fr 1fr;

@@ -8,7 +8,6 @@ const Intro = (props) => {
   return (
     <>
       <main className="intro animated margin-top-md">
-        <h3>Complete all the anagrams before the time runs out!</h3>
         <div className="intro__info">
           <div>
             <span className="intro__info__text bold">3</span> levels
@@ -27,6 +26,17 @@ const Intro = (props) => {
           <div>
             <span className="intro__info__text bold">5</span> minutes
           </div>
+        </div>
+        <div className="intro__mission">
+          <p>
+            Do you know software development? Then, you'll have come across the
+            jumbled words in this game before. <br />
+            <br />
+            To really show off your programming knowledge,{" "}
+            <span className="underline">
+              complete all the anagrams before the time runs out!
+            </span>
+          </p>
         </div>
 
         <Link to="/play">
