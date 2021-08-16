@@ -26,6 +26,7 @@
 
   .intro__tip {
     width: 80%;
+    font-size: 0.8rem;
   }
 
   .intro__info {
@@ -34,7 +35,7 @@
 
   .intro__mission {
     width: 100%;
-    text-align: center;
+    font-size: $font-size-sm;
   }
 
   .input__container {

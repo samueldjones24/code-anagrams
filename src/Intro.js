@@ -27,17 +27,6 @@ const Intro = (props) => {
             <span className="intro__info__text bold">5</span> minutes
           </div>
         </div>
-        <div className="intro__mission">
-          <p>
-            Do you know software development? Then, you'll have come across the
-            jumbled words in this game before. <br />
-            <br />
-            To really show off your programming knowledge,{" "}
-            <span className="underline">
-              complete all the anagrams before the time runs out!
-            </span>
-          </p>
-        </div>
 
         <Link to="/play">
           <button
@@ -49,7 +38,14 @@ const Intro = (props) => {
           </button>
         </Link>
 
-        <div className="intro__tip">
+        <div className="intro__mission">
+          <p>
+            Put your software development knowledge to the test by completing a
+            series of anagrams before the time runs out!
+          </p>
+        </div>
+
+        <div className="intro__tip margin-top-md">
           <div className="bold">
             Tip
             <Emoji symbol="💡" label="lightbulb" />
