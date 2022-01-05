@@ -134,7 +134,10 @@ function Play(props) {
       ) : (
         <main>
           <div className="time">
-            <span className="bold"> Level {level} | </span>
+            <span className="bold">
+              {" "}
+              Score {score}/15 (level {level}) |{" "}
+            </span>
             <Emoji symbol="⏳" label="hourglass not done" /> {time}
           </div>
           <h1>{anagram}</h1>
