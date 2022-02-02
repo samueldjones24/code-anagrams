@@ -3,7 +3,7 @@
 ## Code Anagrams
 
  📈 3 Levels<br />
- 🤔 15 Anagrams<br />
+ 🧠 15 Anagrams<br />
  ⏲️ 5 Minutes<br />
 
 Can you answer all the anagrams before the time runs out?
